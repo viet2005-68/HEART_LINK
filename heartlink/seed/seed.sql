@@ -36,6 +36,7 @@ INSERT INTO swipes (swiper_id, target_id, action, created_at) VALUES
     (4, 7, 'LIKE', NOW()),
     -- Eva (5)
     (5, 7, 'LIKE', NOW()),
+    (5, 1, 'LIKE', NOW()), -- Anna can accept this incoming like to try creating a match.
     -- Frank (6)
     (6, 5, 'LIKE', NOW()),
     (6, 7, 'LIKE', NOW()),
