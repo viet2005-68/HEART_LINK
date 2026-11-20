@@ -16,11 +16,11 @@ public class Message {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "match_id", nullable = false)
+    @JoinColumn(name = "match_id", nullable = false, foreignKey = @ForeignKey(name = "fk_messages_match"))
     private Match match;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "sender_id", nullable = false)
+    @JoinColumn(name = "sender_id", nullable = false, foreignKey = @ForeignKey(name = "fk_messages_sender"))
     private User sender;
 
     @Column(nullable = false, length = 2000)

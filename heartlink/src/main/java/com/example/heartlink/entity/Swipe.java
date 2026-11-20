@@ -27,11 +27,11 @@ public class Swipe {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "swiper_id", nullable = false)
+    @JoinColumn(name = "swiper_id", nullable = false, foreignKey = @ForeignKey(name = "fk_swipes_swiper"))
     private User swiper;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "target_id", nullable = false)
+    @JoinColumn(name = "target_id", nullable = false, foreignKey = @ForeignKey(name = "fk_swipes_target"))
     private User target;
 
     @Enumerated(EnumType.STRING)

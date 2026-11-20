@@ -31,11 +31,11 @@ public class Match {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_a_id", nullable = false)
+    @JoinColumn(name = "user_a_id", nullable = false, foreignKey = @ForeignKey(name = "fk_matches_user_a"))
     private User userA;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_b_id", nullable = false)
+    @JoinColumn(name = "user_b_id", nullable = false, foreignKey = @ForeignKey(name = "fk_matches_user_b"))
     private User userB;
 
     @Enumerated(EnumType.STRING)
